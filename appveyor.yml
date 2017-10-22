@@ -109,7 +109,7 @@ install:
     # ==================================================
     - '%PHP_SDK%\bin\phpsdk_setvars'
     - 'cd %APPVEYOR_BUILD_FOLDER%\..\php'
-    - '"%VS110COMNTOOLS%\VsDevCmd" %PLATFORM%'
+    - '"%VS140COMNTOOLS%\VsDevCmd" %PLATFORM%'
     - 'echo extension_dir=%APPVEYOR_BUILD_FOLDER%\..\php\ext > php.ini'
     - 'echo extension=php_zephir_parser.dll >> php.ini'
     - 'echo extension=php_curl.dll >> php.ini'
