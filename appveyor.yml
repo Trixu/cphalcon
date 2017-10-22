@@ -127,10 +127,10 @@ install:
     - echo Setting up the php_imagick
     # ==================================================
     - mkdir c:\ImageMagick && cd c:\ImageMagick
-    - ps: (new-object net.webclient).DownloadFile('http://windows.php.net/downloads/pecl/deps/ImageMagick-6.9.3-7-vc11-x86.zip', 'c:\ImageMagick\ImageMagick.zip')
+    - ps: (new-object net.webclient).DownloadFile('http://windows.php.net/downloads/pecl/deps/ImageMagick-6.9.3-7-vc14-x64.zip', 'c:\ImageMagick\ImageMagick.zip')
     - 7z.exe x ImageMagick.zip | FIND /V "ing  "
     - mkdir c:\php_imagick && cd c:\php_imagick
-    - ps: (new-object net.webclient).DownloadFile('http://windows.php.net/downloads/pecl/releases/imagick/3.4.3rc1/php_imagick-3.4.3rc1-5.6-ts-vc11-x86.zip', 'c:\php_imagick\php_imagick.zip')
+    - ps: (new-object net.webclient).DownloadFile('http://windows.php.net/downloads/pecl/releases/imagick/3.4.3rc1/php_imagick-3.4.3rc1-7.1-ts-vc14-x64.zip', 'c:\php_imagick\php_imagick.zip')
     - 7z.exe x php_imagick.zip | FIND /V "ing  "
     # ==================================================
     - echo Download tests dependencies...
