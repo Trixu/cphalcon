@@ -155,7 +155,7 @@ build_script:
 
 on_finish:
     - cd %APPVEYOR_BUILD_FOLDER%
-    - ps: Push-AppveyorArtifact build\php${env:PHP_MAJOR}\safe\Release_TS\php_phalcon.dll
+    - ps: Push-AppveyorArtifact build\php${env:PHP_MAJOR}\safe\x64\Release_TS\php_phalcon.dll
 
 on_failure :
     - 'dir'
