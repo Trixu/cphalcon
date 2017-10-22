@@ -97,7 +97,7 @@ install:
     # ==================================================
     - ps: (new-object net.webclient).DownloadFile('http://windows.php.net/downloads/releases/php-devel-pack-' + ${env:DEVEL_PACK_VERSION} + '.zip', ${env:APPVEYOR_BUILD_FOLDER} + '\..\php-dev.zip')
     - 7z.exe x php-dev.zip | FIND /V "ing  "
-    - mv php-%PHP_VERSION%-devel-VC11-%PLATFORM% php-devpack
+    - mv php-%PHP_VERSION%-devel-VC14-%PLATFORM% php-devpack
     # ==================================================
     - echo Enable Zephir Parser
     # ==================================================
