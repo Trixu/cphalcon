@@ -18,6 +18,7 @@ environment:
         - PHP_TARGET: 7.1
           PHP_VC: 14
           PHP_MAJOR: 7
+          BUILD_PLATFORM: x64
     PHP_SDK: c:\projects\php-sdk
     PHP_DEVPACK: c:\projects\php-devpack
 
