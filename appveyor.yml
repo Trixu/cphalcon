@@ -18,7 +18,6 @@ environment:
         - PHP_TARGET: 7.1
           PHP_VC: 14
           PHP_MAJOR: 7
-          BUILD_PLATFORM: x64
     PHP_SDK: c:\projects\php-sdk
     PHP_DEVPACK: c:\projects\php-devpack
 
@@ -111,6 +110,7 @@ install:
     - '%PHP_SDK%\bin\phpsdk_setvars'
     - 'cd %APPVEYOR_BUILD_FOLDER%\..\php'
     - '"%VS140COMNTOOLS%\VsDevCmd" %PLATFORM%'
+    - 'call "%VS140COMNTOOLS%\..\..\VC\vcvarsall.bat" x86_amd64'
     - 'echo extension_dir=%APPVEYOR_BUILD_FOLDER%\..\php\ext > php.ini'
     - 'echo extension=php_zephir_parser.dll >> php.ini'
     - 'echo extension=php_curl.dll >> php.ini'
